@@ -18,13 +18,13 @@ public class ProvinciaController {
 	private ProvinciaService provinciaService;
 
 	@PostMapping("/add")
-	public String saveBook(@RequestBody Provincia book) {
+	public String saveProvincia(@RequestBody Provincia book) {
 		String id  = provinciaService.save(book);
 		return "Added provincia with id : " + id;
 	}
 
 	@GetMapping("/findAll")
-	public List<Provincia> getBooks() {
+	public List<Provincia> getProvincia() {
 		return provinciaService.findAll();
 	}
 
@@ -41,7 +41,7 @@ public class ProvinciaController {
 	@DeleteMapping("/delete/{id}")
 	public String deleteProvincia(@PathVariable String id) {
 		provinciaService.deleteById(id);
-		return "book provincia with id : " + id;
+		return " provincia with id : " + id;
 	}
 
 }
